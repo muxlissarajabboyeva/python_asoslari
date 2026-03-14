@@ -1,46 +1,41 @@
 class Kitob:
-    def __init__(self,nomi):
-        self.nomi=nomi
-        with open(f"{self.nomi}","w") as fayl:
+    def __init__(self, nomi):
+        self.nomi = nomi
+        # Faylni yaratish
+        with open(self.nomi, "w") as fayl:
             pass
-        
-        def yozish(self,matn):
-            with open(f"{self.nomi}","w") as fayl:
-                fayl.write(matn)
-                
-    def uqish(self):
-        with open(f"{self.nomi}","r") as fayl:
-            return fayl.read()
-        
-    def add_text(matn):
-        with open(f"{self.nomi}","a") as fayl:
-            fayl.write(matn)
-            
-            
-    def first_row():
-        with open(f"{self.nomi}","r") as fayl:
-            return fayl.readline()
-        
-    
-    def massiv(self):
-        print(self.massivv)        
 
-    def __repr__ (self):
-        with open(f"{self.nomi}","r") as fayl:
-            return self.nomi
-        
-        def __getitem__():
-            
-            
-        
-    
-        
-        
-file=Kitob("myfile.txt") 
-file.yozish("Kelajak") 
-print(file.uqish)      
-        
-                    
-                
-                    
-                    
+    # Faylga yozish (avvalgi matnni o'chirib yozadi)
+    def yozish(self, matn):
+        with open(self.nomi, "w") as fayl:
+            fayl.write(matn)
+
+    # Fayldan o'qish
+    def uqish(self):
+        with open(self.nomi, "r") as fayl:
+            return fayl.read()
+
+    # Fayl oxiriga matn qo'shish
+    def add_text(self, matn):
+        with open(self.nomi, "a") as fayl:
+            fayl.write(matn)
+
+    # Fayldagi birinchi qatorni o'qish
+    def first_row(self):
+        with open(self.nomi, "r") as fayl:
+            return fayl.readline()
+
+    # Fayl nomini chiqarish
+    def __repr__(self):
+        return f"Kitob({self.nomi})"
+
+
+# Ishlatish misoli
+file = Kitob("myfile.txt") 
+
+file.yozish("Kelajak\n")          # Faylga yozish
+file.add_text("Bilim\n")          # Fayl oxiriga qo'shish
+
+print(file.uqish())               # Fayldagi hamma matnni o'qish
+print(file.first_row())           # Fayldagi birinchi qator
+print(file)                       # Kitob(myfile.txt)
