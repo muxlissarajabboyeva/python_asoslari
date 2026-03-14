@@ -25,4 +25,12 @@ class Shaxs:
 obj1=Shaxs("Muxlisa","Rajabboyeva","Ishsiz",78889996543215)
 obj2=Shaxs("Fotima","Nurmetova","Ishsiz",12345678908765)
 obj3=Shaxs("Nafosat","Rustambekova","Ishsiz",34567890234579)
+
+print(obj1.get_info())       # Muxlisa Rajabboyeva Ishsiz
+print(obj1.get_JSHSHIR())    # 78889996543215
+
+obj1.change_JSHSHIR(98765432101234)
+print(obj1.get_JSHSHIR())    # 98765432101234
+
+print(Shaxs.get_count())     # 3
         
