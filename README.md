@@ -1,1 +1,1 @@
-# Python_asoslari
+# Python
