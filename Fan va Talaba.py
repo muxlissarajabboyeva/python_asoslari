@@ -6,7 +6,7 @@ class Fan:
     def get_info(self):
         return f"{self.nomi} {self.kredit}"
         
-    def updete_narx(self,n):
+    def update_narx(self,n):
         self.kredit=self.kredit+n
         
     def __repr__(self):
