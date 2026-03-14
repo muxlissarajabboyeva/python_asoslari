@@ -17,6 +17,6 @@ class Kompyuter:
         
 a1=Kompyuter("INTEL CORE i5","4GB","256 GB SSD",4200000) 
 
-print(a1.narxi())   
+print(a1.narxi)   
 a1.narx_yangilash(4500000)        
 print(a1.narxi)
