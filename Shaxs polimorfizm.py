@@ -35,3 +35,12 @@ class Admin(Foydalanuvchi):
     
     def ban_user(self):
         return "Foydalanuvchi bloklandi"
+
+obj1 = Shaxs("Ali", "Valiyev", "Ishsiz")
+obj2 = Foydalanuvchi("Muxlisa","Rajabboyeva","Ishsiz","Student")
+obj3 = Admin("Botir","Karimov","Ishsiz","Student", "1000$")
+
+# Polimorfizm ishlaydi:
+print(obj1.get_info())  # Ali Valiyev Ishsiz
+print(obj2.get_info())  # Muxlisa Rajabboyeva Ishsiz Student
+print(obj3.get_info())  # Botir Karimov Ishsiz Student1000$
